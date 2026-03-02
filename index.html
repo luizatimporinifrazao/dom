@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    
+
+    <h1 id="texto">precione qualquer tecla</h1> 
+    <!--de mudar de cor com qualquer tecla-->
+     <script>
+        
+        const cores = ["rgb(255, 0, 0)","rgb(0, 255, 0)","rgb(0, 0, 255)","rgb(255, 255, 0)","rgb(128, 0, 128)"];
+        let indiceCor = 0; 
+
+        
+        document.addEventListener('keydown', function(event) {
+            
+          
+            document.body.style.backgroundColor = cores[indiceCor];
+            
+           
+            indiceCor = (indiceCor + 1) % cores.length;
+            
+            console.log("Cor atual:", cores[indiceCor - 1] || cores[cores.length - 1]);
+        });
+    </script>
+</body>
+</html>
